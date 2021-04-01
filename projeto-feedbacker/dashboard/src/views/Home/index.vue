@@ -35,7 +35,11 @@ export default {
       })
     }
 
-    function handleAccountCreate() {}
+    function handleAccountCreate() {
+       modal.open({
+        component: 'ModalAccountCreate'
+      })
+    }
     return {
       handleLogin,
       handleAccountCreate,

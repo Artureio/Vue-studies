@@ -9,6 +9,7 @@
 
         <div class="flex">
           <button
+            @click="()=> emit('create-account')"
             class="px-6 py-2 font-bold rounded-full text-white focus:outline-none"
           >
             Crie uma conta
