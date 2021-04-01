@@ -1,5 +1,5 @@
 <template>
-<h1>teste feed</h1>
+<h1>Feedbacks</h1>
 </template>
 
 <script>
