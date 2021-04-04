@@ -17,11 +17,9 @@ const httpClient = axios.create({
 httpClient.interceptors.request.use(config => {
     setGlobalLoading(true)
     const token = window.localStorage.getItem('token')
+
     if (token){
         config.headers.common.Authorization = `Bearer ${token}`
-    }
-    if(error.response.status === 401){
-        router.push({name: 'Home'})
     }
     return config
 })
@@ -37,6 +35,9 @@ httpClient.interceptors.response.use((response) => {
         setGlobalLoading(false)
         throw new Error(error.message)
     }
+    if (error.response.status === 401) {
+        router.push({ name: 'Home' })
+      }
     setGlobalLoading(false)
     return error
 })
