@@ -9,7 +9,7 @@
             <p class="text-lg text-center text-gray-800 font-regular">Guia de instalação e geração de suas credenciais</p>    
         </div>
 
-        <div class="flex justify-center w-full">
+        <div class="flex justify-center w-full h-full">
             <div class="flex flex-col  w-4/5 max-w-6xl py-10 ">
                 <h1 class="text-3xl font-black text-brand-graydark">Instalação e configuração</h1>
                 <p class="mt-10 text-lg  text-gray-700 font-regular">
@@ -25,7 +25,7 @@
 
                 <div 
                     v-else
-                    class="flex py-3 pl-5 pr-2 mt-2  rounded items-center justify-between bg-brand-gray w-full lg:w-2/3">
+                    class="flex py-3 pl-5 pr-2 mt-2  rounded items-center justify-between bg-brand-gray w-full lg:w-1/2">
                     <span v-if="state.hasError">Erro ao carregar a apikey</span>
                     <span v-else>{{store.User.currentUser.apiKey}}</span>
                     <div class="flex ml-5 mr-5" v-if="!state.hasError">
@@ -45,15 +45,11 @@
                         />
                     </div> 
                 </div>
-                <p class="mt-5 text-lg  text-gray-700 font-regular">
+                <p class="mt-5 text-lg  text-gray-800 font-regular">
                     Coloque o script abaixo no seu site para começar a receber feedbacks
                 </p>
 
-                <content-loader>
-                    <content-loader>
 
-                    </content-loader>
-                </content-loader>
 
                 <content-loader 
                     v-if="store.Global.isLoading || state.isLoading" 
